@@ -24,19 +24,74 @@
 .icon {
     cursor:pointer;   
 }
+.panel-primary {
+	border-color:#46B7D5;
+}
+.panel-primary > .panel-heading {
+	background-color:#46B7D5;
+	border-color:#46B7D5;
+}
 .panel-heading span {
 	margin-top: -20px;
 	font-size: 15px;
 }
+
+/* default link color */
+a {
+	color:#d1d1d1;
+}
+
+/* hover */
+.nav > li > a:focus,
+.nav > li > a:hover {
+	background-color:transparent;
+	color:#005488;
+	border-color:transparent;
+}
+
+/* active link */
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+	color:#005488;
+}
+
 .howitworks-container {
 	margin-top:0;
+	vertical-align:middle;
 }
 .howitworks-text {
-	margin-top:20px;
+	margin-top:0;
+	font-size:12px;
+	vertical-align:middle;
+}
+@media (max-width: 991px) { 
+.howitworks-text {
+	display:inline-block;
+}
 }
 @media (max-width: 767px) { 
 .nav-tabs > li {
 	float:none;
+}
+.howitworks-text {
+	display:inline;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+	border:1px solid #ddd;
+}
+
+.nav-tabs {
+	border:none;
+}
+
+.nav-tabs>li>a {
+	border-radius:4px;
+}
+
+.howitworks-explainer {
+	margin-bottom:25px;
 }
 }
 
@@ -51,64 +106,64 @@
     <div class="col-md-12">
       <div class="panel panel-primary">
         <div class="panel-heading">
-          <h3 class="panel-title">Learn More</h3>
-          <span class="pull-right icon"><i class="glyphicon glyphicon-chevron-up"></i></span>
+          <h3 class="panel-title"><span class="icon"><i class="glyphicon glyphicon-chevron-down"></i></span> Learn More</h3>
         </div>
         <div class="panel-body">
 
 <div>
   <ul class="nav nav-tabs">
     <li class="active">
-      <a  href="#1" data-toggle="tab">Tellus Fringilla Dolor</a>
+      <a  href="#1" data-toggle="tab">What to Expect</a>
     </li>
     <li>
-      <a href="#2" data-toggle="tab">Pellentesque Ullamcorper Commodo</a>
+      <a href="#2" data-toggle="tab">What It Costs</a>
     </li>
     <li>
-      <a href="#3" data-toggle="tab">Tristique Sit Aenean</a>
+      <a href="#3" data-toggle="tab">What if the Sale Cancels?</a>
     </li>
   </ul>
 
-  <div class="tab-content ">
+  <div class="tab-content">
     <div class="tab-pane active" id="1">
       <div class="row">
-      	<div class="col-sm-6">
-        <p>Tellus fringilla dolor faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum;</p>
+      	<div class="col-sm-6 howitworks-explainer">
+        <p>From start to finish, the eCommission process for advancing your commissions is fast and confidential. To qualify, you will need the following:</p>
         <ul>
-          <li>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</li>
-          <li>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</li>
-          <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+          <li>An active real estate license.</li>
+          <li>A pending sale closing within 120 days.</li>
+          <li>Escrow file opened.</li>
+          <li>A valid bank account.</li>
         </ul>
         </div>
         <div class="col-sm-6">
           <div class="row howitworks-container">
           	<div class="col-sm-6 col-xs-12">
               <img class="pull-left" src="http://www.ifonly.com/images/icon_luminaries_green.png" height="75" alt="">
-              <div><p class="howitworks-text">Sed posuere consectetur est at lobortis.</p></div>
+              <div><p class="howitworks-text">Submit application online in minutes.</p></div>
             </div>
             <div class="col-sm-6 col-xs-12">
               <img class="pull-left" src="http://www.ifonly.com/images/icon_luminaries_green.png" height="75" alt="">
-              <div><p class="howitworks-text">Maecenas faucibus mollis interdum.</p></div>
+              <div><p class="howitworks-text">Receive agreement for you and your broker to approve.</p></div>
             </div>
           </div>
           <div class="row howitworks-container">
           	<div class="col-sm-6 col-xs-12">
               <img class="pull-left" src="http://www.ifonly.com/images/icon_luminaries_green.png" height="75" alt="">
-              <div><p class="howitworks-text">Nullam quis risus eget urna mollis ornare vel eu leo.</p></div>
+              <div><p class="howitworks-text">Funds wired in 1 business day.</p></div>
             </div>
             <div class="col-sm-6 col-xs-12">
               <img class="pull-left" src="http://www.ifonly.com/images/icon_luminaries_green.png" height="75" alt="">
-              <div><p class="howitworks-text">Maecenas faucibus mollis interdum.</p></div>
+              <div><p class="howitworks-text">Advance repaid directly to eCommission at closing.</p></div>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="tab-pane" id="2">
-      <p>Pellentesque Ullamcorper Commodo...</p>
+      <p>What It Costs...</p>
     </div>
     <div class="tab-pane" id="3">
-      <p>Tristique Sit Aenean...</p>
+      <p>What if the Sale Cancels?...</p>
     </div>
   </div>
 </div>
@@ -121,17 +176,18 @@
 
 <script>
 //panel
-$(document).on('click', '.panel-heading span.icon', function(e){
+//$(".panel-body").hide();
+$(document).on('click', '.panel-heading' || 'span.icon', function(e){
 var $this = $(this);
 if(!$this.hasClass('panel-collapsed')) {
 	$this.parents('.panel').find('.panel-body').slideUp();
 	$this.addClass('panel-collapsed');
-	$this.find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+	$this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-right');
 } else {
 	$this.parents('.panel').find('.panel-body').slideDown();
 	$this.removeClass('panel-collapsed');
-	$this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
-}
+	$this.find('i').removeClass('glyphicon-chevron-right').addClass('glyphicon-chevron-down');
+};
 });
 </script>
 

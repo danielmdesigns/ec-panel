@@ -16,8 +16,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 <style>
-/* Panel */
-.row {
+.row lm-row, .lm-row {
     margin-top: 25px;
     padding: 0 10px;
 }
@@ -35,30 +34,26 @@
 	margin-top: -20px;
 	font-size: 15px;
 }
-
-/* default link color */
 a[class="lm-tabs"] {
 	color:#d1d1d1;
 }
-
-/* hover */
 .nav > li > a:focus,
 .nav > li > a:hover {
 	background-color:transparent;
 	color:#005488;
 	border-color:transparent;
 }
-
-/* active link */
 .nav-tabs > li.active > a,
 .nav-tabs > li.active > a:focus,
 .nav-tabs > li.active > a:hover {
 	color:#005488;
 }
-
 .lm-container {
 	margin-top:0;
 	vertical-align:middle;
+}
+.lm-icon{
+	padding-right:8px;
 }
 .lm-icon-text {
 	margin-top:20px;
@@ -66,9 +61,7 @@ a[class="lm-tabs"] {
 	font-size:12px;
 	vertical-align:middle;
 }
-.lm-icon{
-	padding-right:8px;
-}
+
 @media (max-width: 991px) { 
 .lm-icon-text {
 	display:inline-block;
@@ -76,6 +69,7 @@ a[class="lm-tabs"] {
 	margin-left:0;
 }
 }
+
 @media (max-width: 767px) { 
 .nav-tabs {
 	border:none;
@@ -109,7 +103,7 @@ a[class="lm-tabs"] {
 <body>
 
 <div class="container">
-  <div class="row">
+  <div class="row lm-row">
     <div class="col-md-12">
       <div class="panel panel-primary">
         <div class="panel-heading">
@@ -131,18 +125,18 @@ a[class="lm-tabs"] {
 
   <div class="tab-content">
     <div class="tab-pane active" id="1">
-      <div class="row">
+      <div class="row lm-row">
       	<div class="col-sm-6 lm-read">
         <p>From start to finish, the eCommission process for advancing your commissions is fast and confidential. To qualify, you will need the following:</p>
         <ul>
           <li>An active real estate license.</li>
           <li>A pending sale closing within 120 days.</li>
-          <li>Escrow file opened.</li>
+          <li>Escrow lm-row file opened.</li>
           <li>A valid bank account.</li>
         </ul>
         </div>
         <div class="col-sm-6">
-          <div class="row lm-container">
+          <div class="row lm-row lm-container">
           	<div class="col-sm-6 col-xs-12 lm-icon-group">
               <img class="pull-left lm-icon" src="imgs/1-ApplyOnline.png" height="75" alt="">
               <div><p class="lm-icon-text">Submit application online in minutes.</p></div>
@@ -152,7 +146,7 @@ a[class="lm-tabs"] {
               <div><p class="lm-icon-text">Receive agreement for you and your broker to approve.</p></div>
             </div>
           </div>
-          <div class="row lm-container">
+          <div class="row lm-row lm-container">
           	<div class="col-sm-6 col-xs-12 lm-icon-group">
               <img class="pull-left lm-icon" src="imgs/3-Underwriting.png" height="75" alt="">
               <div><p class="lm-icon-text">Funds wired in 1 business day.</p></div>
@@ -166,14 +160,14 @@ a[class="lm-tabs"] {
       </div>
     </div>
     <div class="tab-pane" id="2">
-      <div class="row">
+      <div class="row lm-row">
         <div class="col-md-12">
           <p>What It Costs...</p>
         </div>
       </div>
     </div>
     <div class="tab-pane" id="3">
-      <div class="row">
+      <div class="row lm-row">
         <div class="col-md-12">
           <p>What if the Sale Cancels?...</p>
         </div>

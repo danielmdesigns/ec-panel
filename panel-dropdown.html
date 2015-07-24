@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Simple Panel & Tabs</title>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="custom.css">
+<!-- Font Awesome Icons -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<!-- jQuery served for Google -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<style>
+/* Panel */
+.row{
+    margin-top:40px;
+    padding: 0 10px;
+}
+
+.clickable{
+    cursor: pointer;   
+}
+
+.panel-heading span {
+	margin-top: -20px;
+	font-size: 15px;
+}
+/* Stacks Tabs when browser < 480px */
+@media (max-width: 480px) { 
+.nav-tabs > li {
+	float:none;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+  <div class="row">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Panel 1</h3>
+          <span class="pull-right clickable"><i class="glyphicon glyphicon-chevron-up"></i></span>
+        </div>
+        <div class="panel-body">Maecenas sed diam eget risus varius blandit sit amet non magna.</div>
+      </div>
+  </div>
+</div>
+
+<div class="container">
+<div class="row"> 
+  <ul class="nav nav-tabs">
+    <li class="active">
+      <a  href="#1" data-toggle="tab">Tab One</a>
+    </li>
+    <li>
+      <a href="#2" data-toggle="tab">Tab Two</a>
+    </li>
+    <li>
+      <a href="#3" data-toggle="tab">Tab Three</a>
+    </li>
+  </ul>
+
+  <div class="tab-content ">
+    <div class="tab-pane active" id="1">
+      <p>...tab one</p>
+    </div>
+    <div class="tab-pane" id="2">
+      <p>...tab two</p>
+    </div>
+    <div class="tab-pane" id="3">
+      <p>...& tab three</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+//panel
+$(document).on('click', '.panel-heading span.clickable', function(){
+var $this = $(this);
+if(!$this.hasClass('panel-collapsed')) {
+	$this.parents('.panel').find('.panel-body').slideUp();
+	$this.addClass('panel-collapsed');
+	$this.find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
+} else {
+	$this.parents('.panel').find('.panel-body').slideDown();
+	$this.removeClass('panel-collapsed');
+	$this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
+}
+});
+
+</script>
+
+</body>
+</html>

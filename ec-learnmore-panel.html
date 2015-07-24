@@ -18,7 +18,7 @@
 <style>
 /* Panel */
 .row {
-    margin-top: 40px;
+    margin-top: 25px;
     padding: 0 10px;
 }
 .icon {
@@ -37,7 +37,7 @@
 }
 
 /* default link color */
-a {
+a[class="lm-tabs"] {
 	color:#d1d1d1;
 }
 
@@ -56,45 +56,52 @@ a {
 	color:#005488;
 }
 
-.howitworks-container {
+.lm-container {
 	margin-top:0;
 	vertical-align:middle;
 }
-.howitworks-text {
-	margin-top:0;
+.lm-icon-text {
+	margin-top:20px;
+	margin-left:20px;
 	font-size:12px;
 	vertical-align:middle;
 }
+.lm-icon{
+	padding-right:8px;
+}
 @media (max-width: 991px) { 
-.howitworks-text {
+.lm-icon-text {
 	display:inline-block;
+	margin-top:8px;
+	margin-left:0;
 }
 }
 @media (max-width: 767px) { 
-.nav-tabs > li {
-	float:none;
-}
-.howitworks-text {
-	display:inline;
-}
-
-.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
-	border:1px solid #ddd;
-}
-
 .nav-tabs {
 	border:none;
 }
-
-.nav-tabs>li>a {
+.nav-tabs > li {
+	float:none;
+}
+.nav-tabs > li > a {
 	border-radius:4px;
 }
-
-.howitworks-explainer {
-	margin-bottom:25px;
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+	border:1px solid #ddd;
+}
+.lm-read {
+	margin-bottom:20px;
+}
+.lm-icon-group {
+	padding-left:0;
+}
+.lm-icon-text {
+	display:inherit;
+	margin-top:30px;
 }
 }
-
 </style>
 
 </head>
@@ -106,27 +113,26 @@ a {
     <div class="col-md-12">
       <div class="panel panel-primary">
         <div class="panel-heading">
-          <h3 class="panel-title"><span class="icon"><i class="glyphicon glyphicon-chevron-down"></i></span> Learn More</h3>
+          <h3 class="panel-title"><span class="icon"><i class="glyphicon glyphicon-chevron-right"></i></span> Learn More</h3>
         </div>
         <div class="panel-body">
-
 <div>
   <ul class="nav nav-tabs">
     <li class="active">
-      <a  href="#1" data-toggle="tab">What to Expect</a>
+      <a class="lm-tabs"  href="#1" data-toggle="tab">What to Expect</a>
     </li>
     <li>
-      <a href="#2" data-toggle="tab">What It Costs</a>
+      <a class="lm-tabs" href="#2" data-toggle="tab">What It Costs</a>
     </li>
     <li>
-      <a href="#3" data-toggle="tab">What if the Sale Cancels?</a>
+      <a class="lm-tabs" href="#3" data-toggle="tab">What if the Sale Cancels?</a>
     </li>
   </ul>
 
   <div class="tab-content">
     <div class="tab-pane active" id="1">
       <div class="row">
-      	<div class="col-sm-6 howitworks-explainer">
+      	<div class="col-sm-6 lm-read">
         <p>From start to finish, the eCommission process for advancing your commissions is fast and confidential. To qualify, you will need the following:</p>
         <ul>
           <li>An active real estate license.</li>
@@ -136,34 +142,42 @@ a {
         </ul>
         </div>
         <div class="col-sm-6">
-          <div class="row howitworks-container">
-          	<div class="col-sm-6 col-xs-12">
-              <img class="pull-left" src="http://www.ifonly.com/images/icon_luminaries_green.png" height="75" alt="">
-              <div><p class="howitworks-text">Submit application online in minutes.</p></div>
+          <div class="row lm-container">
+          	<div class="col-sm-6 col-xs-12 lm-icon-group">
+              <img class="pull-left lm-icon" src="imgs/1-ApplyOnline.png" height="75" alt="">
+              <div><p class="lm-icon-text">Submit application online in minutes.</p></div>
             </div>
-            <div class="col-sm-6 col-xs-12">
-              <img class="pull-left" src="http://www.ifonly.com/images/icon_luminaries_green.png" height="75" alt="">
-              <div><p class="howitworks-text">Receive agreement for you and your broker to approve.</p></div>
+            <div class="col-sm-6 col-xs-12 lm-icon-group">
+              <img class="pull-left lm-icon" src="imgs/2-ReceiveAgreements.png" height="75" alt="">
+              <div><p class="lm-icon-text">Receive agreement for you and your broker to approve.</p></div>
             </div>
           </div>
-          <div class="row howitworks-container">
-          	<div class="col-sm-6 col-xs-12">
-              <img class="pull-left" src="http://www.ifonly.com/images/icon_luminaries_green.png" height="75" alt="">
-              <div><p class="howitworks-text">Funds wired in 1 business day.</p></div>
+          <div class="row lm-container">
+          	<div class="col-sm-6 col-xs-12 lm-icon-group">
+              <img class="pull-left lm-icon" src="imgs/3-Underwriting.png" height="75" alt="">
+              <div><p class="lm-icon-text">Funds wired in 1 business day.</p></div>
             </div>
-            <div class="col-sm-6 col-xs-12">
-              <img class="pull-left" src="http://www.ifonly.com/images/icon_luminaries_green.png" height="75" alt="">
-              <div><p class="howitworks-text">Advance repaid directly to eCommission at closing.</p></div>
+            <div class="col-sm-6 col-xs-12 lm-icon-group">
+              <img class="pull-left lm-icon" src="imgs/4-Funding.png" height="75" alt="">
+              <div><p class="lm-icon-text">Advance repaid directly to eCommission at closing.</p></div>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="tab-pane" id="2">
-      <p>What It Costs...</p>
+      <div class="row">
+        <div class="col-md-12">
+          <p>What It Costs...</p>
+        </div>
+      </div>
     </div>
     <div class="tab-pane" id="3">
-      <p>What if the Sale Cancels?...</p>
+      <div class="row">
+        <div class="col-md-12">
+          <p>What if the Sale Cancels?...</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -174,19 +188,25 @@ a {
   </div>
 </div>
 
+<div class="container">
+  <h1>Test Panel Content</h1>
+  <p>Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor.</p>
+  <button class="btn btn-success">Test Button</button>
+</div>
+
 <script>
 //panel
-//$(".panel-body").hide();
+$(".panel-body").hide();
 $(document).on('click', '.panel-heading' || 'span.icon', function(e){
 var $this = $(this);
 if(!$this.hasClass('panel-collapsed')) {
-	$this.parents('.panel').find('.panel-body').slideUp();
-	$this.addClass('panel-collapsed');
-	$this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-right');
-} else {
 	$this.parents('.panel').find('.panel-body').slideDown();
+	$this.addClass('panel-collapsed');
+	$this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-down');
+} else {
+	$this.parents('.panel').find('.panel-body').slideUp();
 	$this.removeClass('panel-collapsed');
-	$this.find('i').removeClass('glyphicon-chevron-right').addClass('glyphicon-chevron-down');
+	$this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-right');
 };
 });
 </script>

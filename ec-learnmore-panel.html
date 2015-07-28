@@ -7,16 +7,29 @@
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <!-- Custom CSS -->
-<link rel="stylesheet" href="file:///Macintosh HD/Users/danielmaldonado/Desktop/custom.css">
+<link rel="stylesheet" href="css/custom.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/main.css">
 <!-- Font Awesome Icons -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <!-- jQuery served for Google -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Bootstrap JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<!-- Slider JS -->
+<link rel="stylesheet" href="css/jquery.nouislider.css">
+<!-- Accordian JS -->
+<link href="../css/zozo.accordion.min.css" rel="stylesheet">
+
+<!-- JS Folder -->
+<script src="js/main.js"></script>
+<script src="js/zozo.accordion.min.js"></script>
+<script src="js/jquery.nouislider.all.min.js"></script>
+<script src="js/jquery.nouislider.min.js"></script>
 
 <style>
-.row lm-row, .lm-row {
+/* Panel */
+.lm-row {
     margin-top: 25px;
     padding: 0 10px;
 }
@@ -112,10 +125,10 @@ a[class="lm-tabs"] {
         <div class="panel-body">
 <div>
   <ul class="nav nav-tabs">
-    <li class="active">
+    <li>
       <a class="lm-tabs"  href="#1" data-toggle="tab">What to Expect</a>
     </li>
-    <li>
+    <li class="active">
       <a class="lm-tabs" href="#2" data-toggle="tab">What It Costs</a>
     </li>
     <li>
@@ -124,7 +137,7 @@ a[class="lm-tabs"] {
   </ul>
 
   <div class="tab-content">
-    <div class="tab-pane active" id="1">
+    <div class="tab-pane" id="1">
       <div class="row lm-row">
       	<div class="col-sm-6 lm-read">
         <p>From start to finish, the eCommission process for advancing your commissions is fast and confidential. To qualify, you will need the following:</p>
@@ -138,31 +151,77 @@ a[class="lm-tabs"] {
         <div class="col-sm-6">
           <div class="row lm-row lm-container">
           	<div class="col-sm-6 col-xs-12 lm-icon-group">
-              <img class="pull-left lm-icon" src="imgs/1-ApplyOnline.png" height="75" alt="">
+              <img class="pull-left lm-icon" src="https://goo.gl/NKyL9I" height="75" alt="">
               <div><p class="lm-icon-text">Submit application online in minutes.</p></div>
             </div>
             <div class="col-sm-6 col-xs-12 lm-icon-group">
-              <img class="pull-left lm-icon" src="imgs/2-ReceiveAgreements.png" height="75" alt="">
+              <img class="pull-left lm-icon" src="https://goo.gl/BXFWEf" height="75" alt="">
               <div><p class="lm-icon-text">Receive agreement for you and your broker to approve.</p></div>
             </div>
           </div>
           <div class="row lm-row lm-container">
           	<div class="col-sm-6 col-xs-12 lm-icon-group">
-              <img class="pull-left lm-icon" src="imgs/3-Underwriting.png" height="75" alt="">
+              <img class="pull-left lm-icon" src="https://goo.gl/FqMeeB" height="75" alt="">
               <div><p class="lm-icon-text">Funds wired in 1 business day.</p></div>
             </div>
             <div class="col-sm-6 col-xs-12 lm-icon-group">
-              <img class="pull-left lm-icon" src="imgs/4-Funding.png" height="75" alt="">
+              <img class="pull-left lm-icon" src="https://goo.gl/b8H17g" height="75" alt="">
               <div><p class="lm-icon-text">Advance repaid directly to eCommission at closing.</p></div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="tab-pane" id="2">
+    <div class="tab-pane active" id="2">
       <div class="row lm-row">
         <div class="col-md-12">
-          <p>What It Costs...</p>
+          <div class="pane" id="tab2">
+  <h2 class="center">Commission Advance Estimator <br/> <strong>Get up to $15,000</strong></h2>
+  <h3 class="center">Slide to select your commission advance</h3>
+
+<div class="slider" id="commission"></div>
+
+<div class="row">
+  <div class="col-sm-6">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tr class="advance">
+        <td>Advance Amount</td>
+        <td><div id="sliderValue">$0</div></td>
+      </tr>
+      <tr class="underline">
+        <td>Fee</td>
+        <td><div id="feesValue">$750</div></td>
+      </tr>
+      <tr class="total">
+        <td>Due At Closing</td>
+        <td><div id="totalValue">$8,250</div></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="col-sm-6 btnContainer" id="hpgslider">
+    <p class="center"><br>
+    <a class="joinButton btn orange btn-lg autoPromo">Let's Get Started<br><small>No hidden fees. No credit check.</small></a></p>
+    <p class="center small">  Your fees are tax deductible!</p>
+  </div>
+
+  <div class="col-sm-12">
+  <br><br>
+    <h3 class="center">The cost of an <strong>eCommission</strong> advance</h3>
+  <br>
+    <ul>
+      <li>Example is based on a 40 day closing. Longer advances available up to 120 days.</li>
+      <li>The fee is added to your advance, meaning you pay nothing upfront to use this service.</li>
+      <li>There is a 20-day grace period from the closing date to have the advance repaid without any additional cost.</li>
+      <li>Advance limits may vary based on sales production.</li>
+    </ul>
+  <br />
+    <div class="offer"><strong>NEW CUSTOMER BONUS </strong> Receive 30% off your fee! Use code 30NEW<br></div>
+  <br><br>
+  </div>
+</div>
+  
+</div>
         </div>
       </div>
     </div>
@@ -183,14 +242,18 @@ a[class="lm-tabs"] {
 </div>
 
 <div class="container">
-  <h1>Test Panel Content</h1>
-  <p>Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor.</p>
-  <button class="btn btn-success">Test Button</button>
+  <div class="row">
+  <div class="col-md-12">
+    <h1>Test Panel Content</h1>
+    <p>Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor.</p>
+    <button class="btn btn-default">Test Button</button>
+  </div>
+  </div>
 </div>
 
 <script>
 //panel
-$(".panel-body").hide();
+//$(".panel-body").hide();
 $(document).on('click', '.panel-heading' || 'span.icon', function(e){
 var $this = $(this);
 if(!$this.hasClass('panel-collapsed')) {

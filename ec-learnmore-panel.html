@@ -7,7 +7,9 @@
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 <!-- Custom CSS -->
-<link rel="stylesheet" href="file:///Macintosh HD/Users/danielmaldonado/Desktop/custom.css">
+<link rel="stylesheet" href="css/custom.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/slider.css">
 <!-- Font Awesome Icons -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <!-- jQuery served for Google -->
@@ -15,31 +17,100 @@
 <!-- Bootstrap JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+
+<!-- Slider JS -->
+<link rel="stylesheet" href="css/jquery.nouislider.css">
+<!-- Accordian JS -->
+<link href="../css/zozo.accordion.min.css" rel="stylesheet">
+
+<!-- JS Folder -->
+<script src="js/main.js"></script>
+<script src="js/zozo.accordion.min.js"></script>
+<script src="js/jquery.nouislider.all.min.js"></script>
+<script src="js/jquery.nouislider.min.js"></script>
+
 <style>
 /* Panel */
-.row {
-    margin-top: 40px;
-    padding: 0 10px;
+.lm-row {
+	margin-top: 25px;
+	padding: 0 10px;
 }
 .icon {
     cursor:pointer;   
+}
+.panel-primary {
+	border-color:#46B7D5;
+}
+.panel-primary > .panel-heading {
+	background-color:#46B7D5;
+	border-color:#46B7D5;
 }
 .panel-heading span {
 	margin-top: -20px;
 	font-size: 15px;
 }
-.howitworks-container {
+a[class="lm-tabs"] {
+	color:#d1d1d1;
+}
+.nav > li > a:focus,
+.nav > li > a:hover {
+	background-color:transparent;
+	color:#005488;
+	border-color:transparent;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+	color:#005488;
+}
+.lm-container {
 	margin-top:0;
+	vertical-align:middle;
 }
-.howitworks-text {
+.lm-icon{
+	padding-right:8px;
+}
+.lm-icon-text {
 	margin-top:20px;
+	margin-left:20px;
+	font-size:12px;
+	vertical-align:middle;
 }
-@media (max-width: 767px) { 
-.nav-tabs > li {
-	float:none;
+
+@media (max-width: 991px) { 
+.lm-icon-text {
+	display:inline-block;
+	margin-top:8px;
+	margin-left:0;
 }
 }
 
+@media (max-width: 767px) { 
+.nav-tabs {
+	border:none;
+}
+.nav-tabs > li {
+	float:none;
+}
+.nav-tabs > li > a {
+	border-radius:4px;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+	border:1px solid #ddd;
+}
+.lm-read {
+	margin-bottom:20px;
+}
+.lm-icon-group {
+	padding-left:0;
+}
+.lm-icon-text {
+	display:inherit;
+	margin-top:30px;
+}
+}
 </style>
 
 </head>
@@ -47,68 +118,138 @@
 <body>
 
 <div class="container">
-  <div class="row">
+  <div class="row lm-row">
     <div class="col-md-12">
       <div class="panel panel-primary">
         <div class="panel-heading">
-          <h3 class="panel-title">Learn More</h3>
-          <span class="pull-right icon"><i class="glyphicon glyphicon-chevron-up"></i></span>
+          <h3 class="panel-title"><span class="icon"><i class="glyphicon glyphicon-chevron-right"></i></span> Learn More</h3>
         </div>
         <div class="panel-body">
-
 <div>
   <ul class="nav nav-tabs">
     <li class="active">
-      <a  href="#1" data-toggle="tab">Tellus Fringilla Dolor</a>
+      <a class="lm-tabs"  href="#1" data-toggle="tab">What to Expect</a>
     </li>
     <li>
-      <a href="#2" data-toggle="tab">Pellentesque Ullamcorper Commodo</a>
+      <a class="lm-tabs" href="#2" data-toggle="tab">What It Costs</a>
     </li>
     <li>
-      <a href="#3" data-toggle="tab">Tristique Sit Aenean</a>
+      <a class="lm-tabs" href="#3" data-toggle="tab">What if the Sale Cancels?</a>
     </li>
   </ul>
 
-  <div class="tab-content ">
+  <div class="tab-content">
     <div class="tab-pane active" id="1">
-      <div class="row">
-      	<div class="col-sm-6">
-        <p>Tellus fringilla dolor faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum;</p>
+      <div class="row lm-row">
+      	<div class="col-sm-6 lm-read">
+        <p>From start to finish, the eCommission process for advancing your commissions is fast and confidential. To qualify, you will need the following:</p>
         <ul>
-          <li>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</li>
-          <li>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</li>
-          <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+          <li>An active real estate license.</li>
+          <li>A pending sale closing within 120 days.</li>
+          <li>Escrow lm-row file opened.</li>
+          <li>A valid bank account.</li>
         </ul>
         </div>
         <div class="col-sm-6">
-          <div class="row howitworks-container">
-          	<div class="col-sm-6 col-xs-12">
-              <img class="pull-left" src="http://www.ifonly.com/images/icon_luminaries_green.png" height="75" alt="">
-              <div><p class="howitworks-text">Sed posuere consectetur est at lobortis.</p></div>
+          <div class="row lm-row lm-container">
+          	<div class="col-sm-6 col-xs-12 lm-icon-group">
+              <img class="pull-left lm-icon" src="https://goo.gl/NKyL9I" height="75" alt="">
+              <div><p class="lm-icon-text">Submit application online in minutes.</p></div>
             </div>
-            <div class="col-sm-6 col-xs-12">
-              <img class="pull-left" src="http://www.ifonly.com/images/icon_luminaries_green.png" height="75" alt="">
-              <div><p class="howitworks-text">Maecenas faucibus mollis interdum.</p></div>
+            <div class="col-sm-6 col-xs-12 lm-icon-group">
+              <img class="pull-left lm-icon" src="https://goo.gl/BXFWEf" height="75" alt="">
+              <div><p class="lm-icon-text">Receive agreement for you and your broker to approve.</p></div>
             </div>
           </div>
-          <div class="row howitworks-container">
-          	<div class="col-sm-6 col-xs-12">
-              <img class="pull-left" src="http://www.ifonly.com/images/icon_luminaries_green.png" height="75" alt="">
-              <div><p class="howitworks-text">Nullam quis risus eget urna mollis ornare vel eu leo.</p></div>
+          <div class="row lm-row lm-container">
+          	<div class="col-sm-6 col-xs-12 lm-icon-group">
+              <img class="pull-left lm-icon" src="https://goo.gl/FqMeeB" height="75" alt="">
+              <div><p class="lm-icon-text">Funds wired in 1 business day.</p></div>
             </div>
-            <div class="col-sm-6 col-xs-12">
-              <img class="pull-left" src="http://www.ifonly.com/images/icon_luminaries_green.png" height="75" alt="">
-              <div><p class="howitworks-text">Maecenas faucibus mollis interdum.</p></div>
+            <div class="col-sm-6 col-xs-12 lm-icon-group">
+              <img class="pull-left lm-icon" src="https://goo.gl/b8H17g" height="75" alt="">
+              <div><p class="lm-icon-text">Advance repaid directly to eCommission at closing.</p></div>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="tab-pane" id="2">
-      <p>Pellentesque Ullamcorper Commodo...</p>
+      <div class="row lm-row">
+        <div class="col-md-12">
+        
+<div class="pane" id="tab2">
+  <h2 class="center">Commission Advance Estimator<br/>
+    <strong>Get up to $15,000</strong>
+  </h2>
+  <h3 class="center">Slide to select your commission advance</h3>
+
+  <div class="slider" id="commission"></div>
+
+  <div class="row">
+    <div class="col-sm-6">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tr class="advance">
+          <td>Advance Amount</td>
+          <td><div id="sliderValue">$0</div></td>
+        </tr>
+        <tr class="underline">
+          <td>Fee</td>
+          <td><div id="feesValue">$750</div></td>
+        </tr>
+        <tr class="total">
+          <td>Due At Closing</td>
+          <td><div id="totalValue">$8,250</div></td>
+        </tr>
+      </table>
+    </div>
+  
+    <div class="col-sm-6" id="lm-slider">
+      <p class="center"><br>
+        <a class="joinButton btn btn-lg autoPromo">Let's Get Started<br>
+          <small>No hidden fees. No credit check.</small>
+        </a>
+      </p>
+      <p class="center small">  Your fees are tax deductible!</p>
+    </div>
+  
+    <div class="col-sm-12">
+    <br><br>
+    <h3 class="center">The cost of an
+      <strong>eCommission</strong>
+      advance
+    </h3>
+    <br>
+    <ul>
+      <li>Example is based on a 40 day closing. Longer advances available up to 120 days.</li>
+      <li>The fee is added to your advance, meaning you pay nothing upfront to use this service.</li>
+      <li>There is a 20-day grace period from the closing date to have the advance repaid without any additional cost.</li>
+      <li>Advance limits may vary based on sales production.</li>
+    </ul>
+    <br>
+    <div class="offer">
+      <strong>NEW CUSTOMER BONUS</strong> 
+      Receive 30% off your fee! Use code 30NEW<br>
+    </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
     </div>
     <div class="tab-pane" id="3">
-      <p>Tristique Sit Aenean...</p>
+      <div class="row lm-row">
+        <div class="col-md-12">
+          <p class="center">
+            <img src="imgs/90percent.png" height="100" width="300" class="responsive" alt="90% of Sales close successfully">
+          </p>
+          <p class="center">On average, 90% of single family residential sales close as expected. In those rare instances when a sale falls through, simply replace the advance using future earned commissions. </p><br>
+          <p class="center">
+          <a class="joinButton btn btn-lg autoPromo">Let's Get Started<br><small>Apply in minutes. No credit check.</small></a></p>
+          <p class="center small">  Your fees are tax deductible!</p><br>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -119,19 +260,30 @@
   </div>
 </div>
 
+<div class="container">
+  <div class="row">
+  <div class="col-md-12">
+    <h1>Test Panel Content</h1>
+    <p>Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Curabitur blandit tempus porttitor.</p>
+    <button class="btn">Test Button</button>
+  </div>
+  </div>
+</div>
+
 <script>
 //panel
-$(document).on('click', '.panel-heading span.icon', function(e){
+$(".panel-body").hide();
+$(document).on('click', '.panel-heading' || 'span.icon', function(e){
 var $this = $(this);
 if(!$this.hasClass('panel-collapsed')) {
-	$this.parents('.panel').find('.panel-body').slideUp();
-	$this.addClass('panel-collapsed');
-	$this.find('i').removeClass('glyphicon-chevron-up').addClass('glyphicon-chevron-down');
-} else {
 	$this.parents('.panel').find('.panel-body').slideDown();
+	$this.addClass('panel-collapsed');
+	$this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-down');
+} else {
+	$this.parents('.panel').find('.panel-body').slideUp();
 	$this.removeClass('panel-collapsed');
-	$this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-up');
-}
+	$this.find('i').removeClass('glyphicon-chevron-down').addClass('glyphicon-chevron-right');
+};
 });
 </script>
 
